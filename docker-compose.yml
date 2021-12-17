@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  comfort_container:
+    image: che_comfort_docker_compose_image:v1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    #保持容器运行
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              # count: 1
+              capabilities: [gpu]
+
+
+
+# services:
+#   comfort_container:
+#     image: che_ubuntu_images
+#     build:
+#       context: .
+#       dockerfile: ./Dockerfile
+#     tty: true
