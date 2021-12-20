@@ -6,6 +6,7 @@ RUN echo "下面安装python"
 RUN apt-get update && apt-get install -y python3-pip git && rm -rf /var/lib/apt/lists/*
 RUN ln -s /usr/bin/python3.8 /usr/bin/python
 RUN pip install gpt-2-simple -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip install pymsql -i https://pypi.tuna.tsinghua.edu.cn/simple
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV HOME /root
