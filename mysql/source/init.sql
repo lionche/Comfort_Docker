@@ -1,4 +1,4 @@
-create schema comfort_all;
+create schema comfort;
 use comfort_all;
 create table Table_Function
 (
