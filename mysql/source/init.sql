@@ -1,5 +1,5 @@
 create schema comfort;
-use comfort_all;
+use comfort;
 create table Table_Function
 (
     Id               int auto_increment
