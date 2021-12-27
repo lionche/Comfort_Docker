@@ -6,12 +6,9 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-
     #保持容器运行
     tty: true
     restart: always
-    ports:
-       - 10086:22
     deploy:
       resources:
         reservations:
@@ -19,6 +16,8 @@ services:
             - driver: nvidia
               # count: 1
               capabilities: [gpu]
+    ports:
+      - "10086:22"
 
 
   mysql_container:

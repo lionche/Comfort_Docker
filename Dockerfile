@@ -14,6 +14,7 @@ ENV COMFORT /root/Comfort_all
 WORKDIR $COMFORT
 ENV http_proxy socks5://10.15.10.87:20170
 ENV https_proxy socks5://10.15.10.87:20170
+LABEL multi.label1="value1" 
 RUN git clone -b dockerfile https://github.com/lionche/Comfort_all.git $COMFORT
 RUN tar -zxvf $COMFORT/data/JStestcases.tar.gz -C $COMFORT/data/
 RUN rm -rf $COMFORT/data/JStestcases.tar.gz
